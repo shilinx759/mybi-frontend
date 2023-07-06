@@ -1,67 +1,72 @@
 declare namespace API {
+  type addUsingGETParams = {
+    /** name */
+    name?: string;
+  };
+
   type BaseResponseBiResponse_ = {
     code?: number;
-    data?: BiResponse;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseBoolean_ = {
     code?: number;
-    data?: boolean;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseChart_ = {
     code?: number;
-    data?: Chart;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseLoginUserVO_ = {
     code?: number;
-    data?: LoginUserVO;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseLong_ = {
     code?: number;
-    data?: number;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponsePageChart_ = {
     code?: number;
-    data?: PageChart_;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponsePageUser_ = {
     code?: number;
-    data?: PageUser_;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponsePageUserVO_ = {
     code?: number;
-    data?: PageUserVO_;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseString_ = {
     code?: number;
-    data?: string;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseUser_ = {
     code?: number;
-    data?: User;
+    data?: Record<string, any>;
     message?: string;
   };
 
   type BaseResponseUserVO_ = {
     code?: number;
-    data?: UserVO;
+    data?: Record<string, any>;
     message?: string;
   };
 
@@ -75,12 +80,14 @@ declare namespace API {
     chartData?: string;
     chartType?: string;
     createTime?: string;
+    execMessage?: string;
     genChart?: string;
     genResult?: string;
     goal?: string;
     id?: number;
     isDelete?: number;
     name?: string;
+    status?: string;
     updateTime?: string;
     userId?: number;
   };
@@ -130,6 +137,12 @@ declare namespace API {
     id?: number;
   };
 
+  type genChartByAiAsyncUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
+  };
+
   type genChartByAiUsingPOSTParams = {
     chartType?: string;
     goal?: string;
@@ -173,7 +186,7 @@ declare namespace API {
     optimizeCountSql?: boolean;
     orders?: OrderItem[];
     pages?: number;
-    records?: Chart[];
+    records?: Record<string, any>[];
     searchCount?: boolean;
     size?: number;
     total?: number;
@@ -186,7 +199,7 @@ declare namespace API {
     optimizeCountSql?: boolean;
     orders?: OrderItem[];
     pages?: number;
-    records?: User[];
+    records?: Record<string, any>[];
     searchCount?: boolean;
     size?: number;
     total?: number;
@@ -199,7 +212,7 @@ declare namespace API {
     optimizeCountSql?: boolean;
     orders?: OrderItem[];
     pages?: number;
-    records?: UserVO[];
+    records?: Record<string, any>[];
     searchCount?: boolean;
     size?: number;
     total?: number;
